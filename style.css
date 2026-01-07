@@ -1,0 +1,116 @@
+ :root {
+  --vermelho: #ff0000;
+  --preto: #0b0b0b;
+  --cinza: #bdbdbd;
+  --vermelho-claro: #ff4d4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #1a0000, var(--preto));
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+.logo span {
+  color: var(--vermelho);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255,0,0,0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+.product {
+  background: rgba(255,0,0,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px var(--vermelho-claro);
+}
+
+.product p {
+  margin: 10px 0;
+  color: var(--cinza);
+}
+
+.stock {
+  display: block;
+  margin-bottom: 15px;
+  color: #ff8080;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--vermelho), var(--vermelho-claro));
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--vermelho-claro);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--cinza);
+}
+
+/* Logo do header */
+.logo-img {
+  height: 60px;           /* Tamanho do logo */
+  cursor: pointer;        /* Mostra que dá para clicar */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);  /* Efeito hover moderno */
+  filter: drop-shadow(0 0 15px #ff0000); /* Glow vermelho */
+}
+
+/* Ajuste no header para alinhar logo e botão */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
